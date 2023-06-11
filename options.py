@@ -5,9 +5,7 @@ class TrainOptions():
     def __init__(self):
         self.parser = argparse.ArgumentParser()
         self.parser.add_argument('--dataroot', type=str, default=r'./datasets/')
-        self.parser.add_argument('--save_dir', type=str, default=r'./results/')
-        self.parser.add_argument('--cell_and_magnification', type=str, default='231_20X/')
-        self.parser.add_argument('--flu', type=str, default='actin')
+        self.parser.add_argument('--save_dir', type=str, default=r'./results/')      
         self.parser.add_argument('--epoch_num', type=int, default=40)
         self.parser.add_argument('--loss', type=str, default='mse')  #mse,l1,sm_l1
         self.parser.add_argument('--mertics', type=str, default='mse')
@@ -20,13 +18,11 @@ class TrainOptions():
         self.parser.add_argument('--weights_path', type=str,
                                  default=r'')
         self.parser.add_argument('--batch_size', type=int, default=2)
-        self.parser.add_argument('--model_name', type=str, default='unet')
         self.parser.add_argument('--val_intel', type=int, default=1)
         self.parser.add_argument('--adv_loss_weight', type=float, default=0.1)
         self.parser.add_argument('--learn_rate_u', type=float, default=0.0001)
         self.parser.add_argument('--learn_rate_g', type=float, default=0.001)
-        self.parser.add_argument('--learn_rate_d', type=float, default=0.001)
-        
+        self.parser.add_argument('--learn_rate_d', type=float, default=0.001)        
         self.parser.add_argument('--focal_loss', type=str, default='false')
         self.parser.add_argument('--note', type=str, default='in_fch=32')
         self.parser.add_argument('--dropout', type=str, default='true')
